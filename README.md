@@ -1,4 +1,5 @@
 ## PasswordManager
+
 ## Introduction
 This Python script serves as a basic password manager using the cryptography library. It allows users to generate and manage passwords securely.
 
@@ -20,6 +21,9 @@ Follow the menu prompts to perform various actions:
 - Load an existing password file
 - Add a new password
 - Get a password
+- List all sites
+- Delete a password
+- Generate a new password
 - Quit
 
 ## Key Management
@@ -28,11 +32,11 @@ Follow the menu prompts to perform various actions:
 
 ## Password File
 - Passwords are stored in a plaintext file with the site name and encrypted password separated by a colon.
-- You can create a new password file with initial values or load an existing one.
+- You can create a new password file or load an existing one.
 
-## Securit Note
+## Security Note
 - Ensure the security of your key file. Losing the key will result in losing access to all stored passwords.
-- Use strong, unique passwords for each site to enhance security.
+- Use strong, unique passwords for each site to enhance security. The script also offers a feature to generate strong random passwords for you.
 - Do not share your password file or key with anyone.
 
 ## Example Usage
@@ -43,6 +47,9 @@ Follow the menu prompts to perform various actions:
     (4) Load an existing password file
     (5) Add a new password
     (6) Get a password
+    (7) List all sites
+    (8) Delete a password
+    (9) Generate a new password
     (q) Quit
     
     Enter your choice: 1
@@ -51,10 +58,26 @@ Follow the menu prompts to perform various actions:
     Enter your choice: 3
     Enter path: passwords.txt
     
+    Enter your choice: 5
+    Enter the site: email
+    Enter the password: mysecretemailpassword
+    Password for email added.
+
     Enter your choice: 6
     What site do you want: email
-    Password for email is b'12345'
+    Password for email is mysecretemailpassword
+
+    Enter your choice: 9
+    Enter desired password length (default 16, min 8, max 128):
+    Generated password: YourStrongGeneratedPassword!123
+    Do you want to save this password? (y/n): y
+    Enter the site name: new_secure_service
+    Password for new_secure_service added.
+
+    Enter your choice: 7
+    Stored sites:
+    - email
+    - new_secure_service
     
     Enter your choice: q
     Goodbye! See you later!
-
